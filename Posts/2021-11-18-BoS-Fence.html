@@ -1,0 +1,55 @@
+<div class="card">
+    <h2>BoS - Shaping Functions</h2>
+    <h5>18th Nov, 2021</h5>
+    <p>I’m at the “Mr. Miyagi's fence lesson.”</p>
+    <p>I think I’ll spend some time here to experiment a bit. <a
+            href="https://www.desmos.com/calculator">desmos.com/calculator</a> has an interactive
+        graph with example formulas. I want to see how many I can port to GLSL before continuing.</p>
+    <p>Trying a standard parabola:</p>
+    <br>
+    <canvas class="glslCanvas" data-fragment-url="/Shaders/parabola-try01.frag" width="400" height="400"></canvas>
+    <p>I'm only seeing the positive quadrant though. Let's try to visualize all quadrants by moving the
+        origin to the center.</p>
+    <p>Currently (0,0) is on the bottom left. I want it to be on the center (0.5, 0.5).</p>
+    <p>By multiplying the coordinates on the screen by (-0.5, -0.5) with the line
+        <code>st-=vec2(0.5,0.5);</code>, I can have the bottom left corner have
+        coordinates (-0.5, -0.5), and by extension, (0,0) is now in the center of the screen:
+    </p>
+    <br>
+    <canvas class="glslCanvas" data-fragment-url="/Shaders/parabola-try02.frag" width="400" height="400"></canvas>
+    <p>Further down the page, there’s a bit about manipulating a sine wave. This is basic stuff I’ve learned
+        in high school, but I barely remember it so here’s a more thorough exploration of the subject:</p>
+    <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01.frag" width="400" height="400"></canvas>
+
+    <p>The graph above is a line plotting the function y = sin(x) with the following code:</p>
+    <pre><code class="language-glsl">float motion = u_time; //moving the line left or right
+float phase = 15.0; //distance between the peaks. Or how often it repeats. Bigger = closer together.
+float displacement = 0.5; //movement up or down.
+float amplitude = 0.2; //height of the wave.
+            
+vec2 line = vec2(st.y, sin(st.x * phase + motion) * amplitude + displacement);</code></pre>
+    <p>(The values above were chosen to fit the graph within this tiny window.)</p>
+    <p>In this example, motion is already animated by “u_time”. Here’s how the rest would look animated
+        using sin(u_time) + some ajustments:</p>
+    <br>
+    <h3>Phase:</h3>
+    <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01-phaseAnim.frag" width="400" height="400"></canvas>
+    <p>phase = sin(u_time) * 10.0;</p>
+    <h3>Displacement:</h3>
+    <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01-displacementAnim.frag" width="400"
+        height="400"></canvas>
+    <p>displacement = sin(u_time) * 0.5 + 0.5;</p>
+    <h3>Amplitude:</h3>
+    <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01-amplitudeAnim.frag" width="400"
+        height="400"></canvas>
+    <p>amplitude = sin(u_time) * 0.2;</p>
+    <br>
+    <p>That’s it for the sine wave itself, but there’s still some more cool functions we can apply to the
+        wave:</p>
+    <h3>Absolute value or abs():</h3>
+    <p>abs() will return the absolute value of a value. It basically folds the graph along the x axis.</p>
+    <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01-abs.frag" width="400" height="400"></canvas>
+    <h3>Absolute value or abs():</h3>
+    <p>abs() will return the absolute value of a value. It basically folds the graph along the x axis.</p>
+    <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01-abs.frag" width="400" height="400"></canvas>
+</div>
