@@ -87,9 +87,10 @@ body {
   line-height: 3rem;
   /* padding: 5rem 25rem; */
   padding: 2% 20%;
-  background: rgb(238,174,202);
-  background: linear-gradient(0deg, #516780 0%, rgba(148,187,233,1) 100%);
-  background-repeat: no-repeat;
+  background: #334b4f;
+  background-image: url(/Images/noisy-texture-100x100.png);
+  /* background: linear-gradient(0deg, #516780 0%, rgba(148,187,233,1) 100%); */
+  /* background-repeat: no-repeat; */
   background-attachment: fixed;
   background-position: right top;
   cursor:crosshair
