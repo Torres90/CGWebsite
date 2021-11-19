@@ -78,7 +78,7 @@ and surrounding that you have the margin.
   /* Coffee Pallet*/  
   --main-color01: #483434;
   --main-color02: #6B4F4F;
-  --main-color02-half-alpha: rgba(107, 79, 79,.5);
+  --main-color02-half-alpha: rgba(107, 79, 79,0.5);
   --accent-color01: #d3986a;
   --accent-color02: #FFF3E4;
   
@@ -87,7 +87,7 @@ and surrounding that you have the margin.
   
   --main-bg-color: var(--main-color01);
   --main-box-color: var(--main-color02);
-  --main-box-shadow-setting: 5px 5px var(--main-color02-half-alpha);
+  --main-box-shadow-setting: 10px 10px 10px 2px rgba(0, 0, 0, 0.5);
   --link-color: var(--accent-color01);
   --header-links-color: var(--accent-color01);
   --header-links-hover-color: var(--accent-color02);
@@ -115,10 +115,10 @@ body {
   padding: 2% 20%;
   background: var(--main-bg-color);
   background-image: url(/Images/noisy-texture-100x100.png);
+  background-attachment: fixed;
   /* background: linear-gradient(0deg, #516780 0%, rgba(148,187,233,1) 100%); */
   /* background-repeat: no-repeat; */
-  background-attachment: fixed;
-  background-position: right top;
+  /* background-position: right top; */
   cursor:crosshair
 }
 a{
