@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Montserrat&display=swap');
 
 /*** RESETING EVERY PROPERTY ***/
 
@@ -68,9 +69,31 @@ and surrounding that you have the margin.
 */
 
 :root{
-  --main-bg-color: rgba(255, 255, 255, 0.5);
-  --main-box-shadow-color: rgba(136, 136, 136, 0.5);
-  --main-box-shadow-setting: 5px 5px rgba(136, 136, 136, 0.5);
+  /* Dark Purple Pallet*/  
+  /* --main-color01: #1F1D36;
+  --main-color02: #3F3351;
+  --accent-color01: #864879;
+  --accent-color02: #E9A6A6; */
+
+  /* Coffee Pallet*/  
+  --main-color01: #483434;
+  --main-color02: #6B4F4F;
+  --main-color02-half-alpha: rgba(107, 79, 79,.5);
+  --accent-color01: #d3986a;
+  --accent-color02: #FFF3E4;
+  
+  --main-text-color: rgb(230, 230, 230);
+  --header-title-color: var(--accent-color02);
+  
+  --main-bg-color: var(--main-color01);
+  --main-box-color: var(--main-color02);
+  --main-box-shadow-setting: 5px 5px var(--main-color02-half-alpha);
+  --link-color: var(--accent-color02);
+  --header-links-color: var(--accent-color01);
+  --header-links-hover-color: var(--accent-color02);
+
+  --main-font: 'Bitter';
+  --accent-font: 'Montserrat';
 }
 
 /* The * selector selects all elements. */
@@ -82,12 +105,13 @@ html{
 }
 
 body {
-  font-family:'Roboto', sans-serif;
+  color: var(--main-text-color);
+  font-family: var(--main-font), serif;
   font-size: 2rem;
   line-height: 3rem;
   /* padding: 5rem 25rem; */
   padding: 2% 20%;
-  background: #334b4f;
+  background: var(--main-bg-color);
   background-image: url(/Images/noisy-texture-100x100.png);
   /* background: linear-gradient(0deg, #516780 0%, rgba(148,187,233,1) 100%); */
   /* background-repeat: no-repeat; */
@@ -95,12 +119,16 @@ body {
   background-position: right top;
   cursor:crosshair
 }
+a{
+  color: var(--link-color);
+}
 
 h2{
   font-weight: 600;
   font-size: 3.5rem;
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
+  line-height: 4rem;
 }
 h3{
   font-weight: 500;
@@ -136,16 +164,17 @@ li.L5, li.L6, li.L7, li.L8, li.L9 {
 
 /* Header/Blog Title */
 .header {
+  color: var(--header-title-color);
   padding: 3rem;
   text-align: center;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--main-box-color);
   box-shadow: var(--main-box-shadow-setting);
 }
 
 .header h1 {
+  font-family: var(--accent-font), serif;
   font-size: 5rem;
   line-height: 10rem;
-  
 }
 
 a.homeLink:link {text-decoration: none;}
@@ -159,7 +188,7 @@ a.homeLink:active { text-decoration: none; }
 /* Style the top navigation bar */
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: var(--header-links-color);
   box-shadow: var(--main-box-shadow-setting);
 }
 
@@ -167,7 +196,7 @@ a.homeLink:active { text-decoration: none; }
 .topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: var(--main-text-color);
   text-align: center;
   padding: 1.4rem 1.6rem;
   text-decoration: none;
@@ -175,8 +204,8 @@ a.homeLink:active { text-decoration: none; }
 
 /* Change color on hover */
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: var(--header-links-hover-color);
+  color: var(--accent-color01);
 }
 
 /* Create two unequal columns that floats next to each other */
@@ -197,6 +226,9 @@ a.homeLink:active { text-decoration: none; }
 
 .rightcolumn h3{
   text-align: center;
+  color: var(--accent-color02);
+  font-family: var(--accent-font), serif;
+
 }
 
 .rightcolumn img{
@@ -212,7 +244,7 @@ a.homeLink:active { text-decoration: none; }
 
 /* Add a card effect for articles */
 .card {
-  background-color: var(--main-bg-color);
+  background-color: var(--main-box-color);
   padding: 3rem;
   margin-top: 2rem;
   box-shadow: var(--main-box-shadow-setting);
@@ -232,7 +264,7 @@ a.homeLink:active { text-decoration: none; }
 .footer {
   padding: 2rem;
   text-align: center;
-  background: var(--main-bg-color);
+  background: var(--main-box-color);
   box-shadow: var(--main-box-shadow-setting);
   margin-top: 2rem;
 }
