@@ -88,9 +88,11 @@ and surrounding that you have the margin.
   --main-bg-color: var(--main-color01);
   --main-box-color: var(--main-color02);
   --main-box-shadow-setting: 5px 5px var(--main-color02-half-alpha);
-  --link-color: var(--accent-color02);
+  --link-color: var(--accent-color01);
   --header-links-color: var(--accent-color01);
   --header-links-hover-color: var(--accent-color02);
+
+  --h2-color: var(--accent-color02);
 
   --main-font: 'Bitter';
   --accent-font: 'Montserrat';
@@ -124,6 +126,7 @@ a{
 }
 
 h2{
+  color: var(--h2-color); 
   font-weight: 600;
   font-size: 3.5rem;
   padding-top: 1.2rem;
