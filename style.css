@@ -114,6 +114,7 @@ and surrounding that you have the margin.
   box-sizing: border-box;
 }
 
+
 html {
   font-size: 62.5%;
 }
@@ -168,6 +169,8 @@ img {
   padding-bottom: 2rem;
 }
 
+
+
 /* For code snippets */
 pre {
   padding: 2rem 5rem;
@@ -176,6 +179,13 @@ pre {
   font-size: 1.5rem;
   font-family: monospace;
   line-height: normal;
+}
+/* For in-line code */
+
+code {
+  /* font-size: 1.5rem; */
+  font-family: monospace;
+  /* line-height: normal; */
 }
 
 /* Style for code prettify to show line numbers */
@@ -294,8 +304,6 @@ a.homeLink:active {
 .card img {
   max-width: 80%;
 }
-
-
 
 /* Clear floats after the columns */
 .row:after {
