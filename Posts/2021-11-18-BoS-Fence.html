@@ -30,7 +30,7 @@ float amplitude = 0.2; //height of the wave.
 vec2 line = vec2(st.y, sin(st.x * phase + motion) * amplitude + displacement);</code></pre>
     <p>(The values above were chosen to fit the graph within this tiny window.)</p>
     <p>In this example, motion is already animated by “u_time”. Here’s how the rest would look animated
-        using sin(u_time) + some ajustments:</p>
+        using sin(u_time) + some adjustments:</p>
     <br>
     <h3>Phase:</h3>
     <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01-phaseAnim.frag" width="400" height="400"></canvas>
@@ -49,7 +49,18 @@ vec2 line = vec2(st.y, sin(st.x * phase + motion) * amplitude + displacement);</
     <h3>Absolute value or abs():</h3>
     <p>abs() will return the absolute value of a value. It basically folds the graph along the x axis.</p>
     <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01-abs.frag" width="400" height="400"></canvas>
-    <h3>Somthing else here just to test</h3>
-    <p>abs() will return the absolute value of a value. It basically folds the graph along the x axis.</p>
-    <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01-abs.frag" width="400" height="400"></canvas>
+    <h3>Fractional value or fract()</h3>
+    <p>fract() will extract the fractional value of the function.</p>
+    <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01-fract.frag" width="400" height="400"></canvas>
+    <h3>ceil() and floor()</h3>
+    <p>ceil() "returns a value equal to the nearest integer that is greater than or equal to x." - It rounds up.</p>
+    <p>In the graph it looks like it's shifted up from the X axis, but it's actually only giving us values of either 0
+        or 1, because it's the ceil() of a sine wave.</p>
+    <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01-ceil.frag" width="400" height="400"></canvas>
+    <p>floor() "returns a value equal to the nearest integer that is less than or equal to x." - It down up.</p>
+    <p>Again, it's not shifted down but actually just giving either 0 or -1 values.</p>
+    <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01-floor.frag" width="400" height="400"></canvas>
+    <p>And if we add the two, we get a wave of -1 and 1 values.</p>
+    <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01-ceilAndFloor.frag" width="400"
+        height="400"></canvas>
 </div>
