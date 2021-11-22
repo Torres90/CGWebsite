@@ -13,5 +13,32 @@
     </ul>
     <p>If we plot <code>y = mod(x, 0.5)</code>:</p>
     <canvas class="glslCanvas" data-fragment-url="/Shaders/mod01.frag" width="400" height="400"></canvas>
-
+    <p>Why this sawtooth result? mod(a, b) returns the value of a modulo b. This is computed as a - b * floor(a/b). Lets
+        calculate 0.1 % 0.5:</p>
+    <ul>
+        <li>0.1 % 0.5 = 0.1 - 0.5 * floor(0.1/0.5)</li>
+        <li>0.1 % 0.5 = 0.1 - 0.5 * floor(0.2)</li>
+        <li>0.1 % 0.5 = 0.1 - 0.5 * 0</li>
+        <li>0.1 % 0.5 = 0.1 - 0</li>
+        <li>0.1 % 0.5 = 0.1</li>
+    </ul>
+    <p>Other values of x:</p>
+    <ul>
+        <li>0.2 % 0.5 = 0.2</li>
+        <li>0.3 % 0.5 = 0.3</li>
+        <li>0.4 % 0.5 = 0.4</li>
+        <li>0.5 % 0.5 = 0.0</li>
+        <li>0.6 % 0.5 = 0.1</li>
+    </ul>
+    <p>What this means is that modulo will give you the remainder of a division, and when you graph that it translates
+        as a rising line. The remainder keeps getting bigger and bigger until eventually you divide the number by
+        itself, resulting in remainder 0.</p>
+    <p>So, when you do <code>y = mod(x, b)</code>, b is how much the line will rise before it resets to zero.</p>
+    <p>Example:</p>
+    <p><code>y = mode(x, 1.0)</code></p>
+    <canvas class="glslCanvas" data-fragment-url="/Shaders/mod02.frag" width="400" height="400"></canvas>
+    <p><code>y = mode(x, 1.5)</code></p>
+    <canvas class="glslCanvas" data-fragment-url="/Shaders/mod03.frag" width="400" height="400"></canvas>
+    <p><code>y = mode(x, 2.5)</code></p>
+    <canvas class="glslCanvas" data-fragment-url="/Shaders/mod04.frag" width="400" height="400"></canvas>
 </div>
