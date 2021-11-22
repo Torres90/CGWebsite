@@ -100,6 +100,9 @@ and surrounding that you have the margin.
   --header-links-color: var(--accent-color01);
   --header-links-hover-color: var(--accent-color02);
 
+  --bg-img: url(/Images/noisy-texture-100x100.png);
+  --bg-img-elements: url(/Images/textured_paper.png);
+
   --h2-color: var(--accent-color02);
 
   --main-font: 'Bitter';
@@ -119,11 +122,11 @@ body {
   color: var(--main-text-color);
   font-family: var(--main-font), serif;
   font-size: 2rem;
-  line-height: 3rem;
+  line-height: 3.5rem;
   /* padding: 5rem 25rem; */
   padding: 2% 20%;
   background: var(--main-bg-color);
-  background-image: url(/Images/noisy-texture-100x100.png);
+  background-image: var(--bg-img);
   background-attachment: fixed;
   /* background: linear-gradient(0deg, #516780 0%, rgba(148,187,233,1) 100%); */
   /* background-repeat: no-repeat; */
@@ -193,6 +196,8 @@ ul {
   padding: 3rem;
   text-align: center;
   background: var(--main-box-color);
+  background-image: var(--bg-img-elements);
+  background-blend-mode: multiply;
   box-shadow: var(--main-box-shadow-setting);
 }
 
@@ -279,6 +284,8 @@ a.homeLink:active {
 /* Add a card effect for articles */
 .card {
   background-color: var(--main-box-color);
+  background-image: var(--bg-img-elements);
+  background-blend-mode: multiply;
   padding: 3rem;
   margin-top: 2rem;
   box-shadow: var(--main-box-shadow-setting);
@@ -303,6 +310,8 @@ a.homeLink:active {
   text-align: center;
   background: var(--main-box-color);
   box-shadow: var(--main-box-shadow-setting);
+  background-image: var(--bg-img-elements);
+  background-blend-mode: multiply;
   margin-top: 2rem;
 }
 
