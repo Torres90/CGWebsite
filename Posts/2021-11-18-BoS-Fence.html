@@ -7,7 +7,7 @@
         graph with example formulas. I want to see how many I can port to GLSL before continuing.</p>
     <p>Trying a standard parabola:</p>
     <br>
-    <canvas class="glslCanvas" data-fragment-url="/Shaders/parabola-try01.frag" width="400" height="400"></canvas>
+    <canvas class="glslCanvas" data-fragment-url="Shaders/parabola-try01.frag" width="400" height="400"></canvas>
     <p>I'm only seeing the positive quadrant though. Let's try to visualize all quadrants by moving the
         origin to the center.</p>
     <p>Currently (0,0) is on the bottom left. I want it to be on the center (0.5, 0.5).</p>
@@ -16,10 +16,10 @@
         coordinates (-0.5, -0.5), and by extension, (0,0) is now in the center of the screen:
     </p>
     <br>
-    <canvas class="glslCanvas" data-fragment-url="/Shaders/parabola-try02.frag" width="400" height="400"></canvas>
+    <canvas class="glslCanvas" data-fragment-url="Shaders/parabola-try02.frag" width="400" height="400"></canvas>
     <p>Further down the page, there’s a bit about manipulating a sine wave. This is basic stuff I’ve learned
         in high school, but I barely remember it so here’s a more thorough exploration of the subject:</p>
-    <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01.frag" width="400" height="400"></canvas>
+    <canvas class="glslCanvas" data-fragment-url="Shaders/sineWave01.frag" width="400" height="400"></canvas>
 
     <p>The graph above is a line plotting the function y = sin(x) with the following code:</p>
     <pre><code class="language-glsl">float motion = u_time; //moving the line left or right
@@ -33,14 +33,14 @@ vec2 line = vec2(st.y, sin(st.x * phase + motion) * amplitude + displacement);</
         using sin(u_time) + some adjustments:</p>
     <br>
     <h3>Phase:</h3>
-    <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01-phaseAnim.frag" width="400" height="400"></canvas>
+    <canvas class="glslCanvas" data-fragment-url="Shaders/sineWave01-phaseAnim.frag" width="400" height="400"></canvas>
     <p>phase = sin(u_time) * 10.0;</p>
     <h3>Displacement:</h3>
-    <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01-displacementAnim.frag" width="400"
+    <canvas class="glslCanvas" data-fragment-url="Shaders/sineWave01-displacementAnim.frag" width="400"
         height="400"></canvas>
     <p>displacement = sin(u_time) * 0.5 + 0.5;</p>
     <h3>Amplitude:</h3>
-    <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01-amplitudeAnim.frag" width="400"
+    <canvas class="glslCanvas" data-fragment-url="Shaders/sineWave01-amplitudeAnim.frag" width="400"
         height="400"></canvas>
     <p>amplitude = sin(u_time) * 0.2;</p>
     <br>
@@ -48,20 +48,20 @@ vec2 line = vec2(st.y, sin(st.x * phase + motion) * amplitude + displacement);</
         wave:</p>
     <h3>Absolute value or abs():</h3>
     <p>abs() will return the absolute value of a value. It basically folds the graph along the x axis.</p>
-    <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01-abs.frag" width="400" height="400"></canvas>
+    <canvas class="glslCanvas" data-fragment-url="Shaders/sineWave01-abs.frag" width="400" height="400"></canvas>
     <h3>Fractional value or fract()</h3>
     <p>fract() will extract the fractional value of the function.</p>
-    <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01-fract.frag" width="400" height="400"></canvas>
+    <canvas class="glslCanvas" data-fragment-url="Shaders/sineWave01-fract.frag" width="400" height="400"></canvas>
     <h3>ceil() and floor()</h3>
     <p>ceil() "returns a value equal to the nearest integer that is greater than or equal to x." - It rounds up.</p>
     <p>In the graph it looks like it's shifted up from the X axis, but it's actually only giving us values of either 0
         or 1, because it's the ceil() of a sine wave.</p>
-    <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01-ceil.frag" width="400" height="400"></canvas>
+    <canvas class="glslCanvas" data-fragment-url="Shaders/sineWave01-ceil.frag" width="400" height="400"></canvas>
     <p>floor() "returns a value equal to the nearest integer that is less than or equal to x." - It down up.</p>
     <p>Again, it's not shifted down but actually just giving either 0 or -1 values.</p>
-    <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01-floor.frag" width="400" height="400"></canvas>
+    <canvas class="glslCanvas" data-fragment-url="Shaders/sineWave01-floor.frag" width="400" height="400"></canvas>
     <p>And if we add the two, we get a wave of -1 and 1 values.</p>
-    <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01-ceilAndFloor.frag" width="400"
+    <canvas class="glslCanvas" data-fragment-url="Shaders/sineWave01-ceilAndFloor.frag" width="400"
         height="400"></canvas>
     <p>I think this is enough for one post, and I'm not even at the end of the BoS article.</p>
 </div>

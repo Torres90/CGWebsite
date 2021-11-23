@@ -12,7 +12,7 @@
         <li>6 % 3 = 0</li>
     </ul>
     <p>If we plot <code>y = mod(x, 0.5)</code>:</p>
-    <canvas class="glslCanvas" data-fragment-url="/Shaders/mod01.frag" width="400" height="400"></canvas>
+    <canvas class="glslCanvas" data-fragment-url="Shaders/mod01.frag" width="400" height="400"></canvas>
     <p>Why this sawtooth result? mod(a, b) returns the value of a modulo b. This is computed as a - b * floor(a/b). Lets
         calculate 0.1 % 0.5:</p>
     <ul>
@@ -36,9 +36,9 @@
     <p>So, when you do <code>y = mod(x, b)</code>, b is how much the line will rise before it resets to zero.</p>
     <p>Example:</p>
     <p><code>y = mode(x, 1.0)</code></p>
-    <canvas class="glslCanvas" data-fragment-url="/Shaders/mod02.frag" width="400" height="400"></canvas>
+    <canvas class="glslCanvas" data-fragment-url="Shaders/mod02.frag" width="400" height="400"></canvas>
     <p><code>y = mode(x, 1.5)</code></p>
-    <canvas class="glslCanvas" data-fragment-url="/Shaders/mod03.frag" width="400" height="400"></canvas>
+    <canvas class="glslCanvas" data-fragment-url="Shaders/mod03.frag" width="400" height="400"></canvas>
     <p><code>y = mode(x, 2.5)</code></p>
-    <canvas class="glslCanvas" data-fragment-url="/Shaders/mod04.frag" width="400" height="400"></canvas>
+    <canvas class="glslCanvas" data-fragment-url="Shaders/mod04.frag" width="400" height="400"></canvas>
 </div>
