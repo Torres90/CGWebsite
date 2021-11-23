@@ -1,7 +1,8 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Montserrat&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Bitter&family=Montserrat&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Cutive+Mono&family=Montserrat&display=swap');
 
-/*** RESETING EVERY PROPERTY ***/
+/*** RESETTING EVERY PROPERTY ***/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -183,9 +184,11 @@ pre {
 /* For in-line code */
 
 code {
-  /* font-size: 1.5rem; */
-  font-family: monospace;
-  /* line-height: normal; */
+  font-size: 2.5rem;
+  font-family: 'Cutive Mono', monospace;
+  line-height: 3.5rem;
+  color: var(--main-text-color);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Style for code prettify to show line numbers */
