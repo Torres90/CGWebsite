@@ -5,6 +5,21 @@
     <h3>Sign or sign()</h3>
     <p>This one is super straight forward. It gives you either -1 or 1 according to the sign of the input.</p>
     <p><code>y = sign(x)</code></p>
-    <canvas class="glslCanvas" data-fragment-url="Shaders/mod01.frag" width="400" height="400"></canvas>
-    <p>Example:</p>
+    <canvas class="glslCanvas" data-fragment-url="Shaders/sign01.frag" width="400" height="400"></canvas>
+    <p>It's useful to get a square wave, by retrieving the sign of sin of x. <code>y=sign(sin(x))</code>:</p>
+    <canvas class="glslCanvas" data-fragment-url="Shaders/sign02.frag" width="400" height="400"></canvas>
+    <h3>Clamp or clamp()</h3>
+    <p>Straight forward as well, but I can already see so many uses for this.</p>
+    <p>For example, if we clamp our abs() example from before, we can get some flat mesas:</p>
+    <p><code>y = clamp(abs(sin(x)), 0.2, 0.6)</code></p>
+    <canvas class="glslCanvas" data-fragment-url="Shaders/clamp01.frag" width="400" height="400"></canvas>
+    <p>If I add a bit of mouse interaction it becomes a bit easier to understand. Move the mouse left & right to control
+        the min clamp value and the move it up & down to control the max clamp value:</p>
+    <p><code>y = clamp(abs(sin(x)), (mouse.y / resolution.y), (mouse.x / resolution.x))</code></p>
+    <canvas class="glslCanvas" data-fragment-url="Shaders/clamp02_mouse.frag" width="400" height="400"></canvas>
+    <p>The other two functions mentioned are max() and min(), but those are so simple I won't create a shader for them.
+    </p>
+    <p>The next section, "Advanced shaping functions" is very theory heavy. I want to make sure I fully understand it
+        before continuing, by going back to 3B1B videos.
+    <p>
 </div>

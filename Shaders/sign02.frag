@@ -18,12 +18,12 @@ void main(){
   
   vec3 color=vec3(y);
   
-  float motion=-.5;//moving the line left or right
-  float phase=0.;//distance between the peaks. Or how often it repeats. Bigger = closer together.
+   float motion=u_time;//moving the line left or right
+  float phase=15.0;//distance between the peaks. Or how often it repeats. Bigger = closer together.
   float displacement=.5;//movement up or down.
-  float amplitude=.25;//height of the wave.
+  float amplitude=.2; //height of the wave.
   
-  vec2 line=vec2(st.y,sign(st.x+motion)*amplitude+displacement);
+  vec2 line=vec2(st.y,sign(sin(st.x*phase+motion))*amplitude+displacement);
   
   // Plot a line
   float pct=plot(line);

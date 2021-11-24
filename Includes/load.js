@@ -13,11 +13,11 @@ $(document).ready(function () {
     // Posts
     load('#post7', "./Posts/2021-11-18-BoS-Fence-Extra-Functions2.html");
     load('#post6', "./Posts/2021-11-18-BoS-Fence-Extra-Functions.html");
-    load('#post5', "./Posts/2021-11-18-BoS-Fence.html");
-    load('#post4', "./Posts/2021-11-17-Learning-Algebra.html");
-    load('#post3', "./Posts/2021-11-16-Starting-Book-of-Shaders.html");
-    load('#post2', "./Posts/2021-11-12-Lecture-1.html");
-    load('#post1', "./Posts/2021-11-12-Start.html");
+    // load('#post5', "./Posts/2021-11-18-BoS-Fence.html");
+    // load('#post4', "./Posts/2021-11-17-Learning-Algebra.html");
+    // load('#post3', "./Posts/2021-11-16-Starting-Book-of-Shaders.html");
+    // load('#post2', "./Posts/2021-11-12-Lecture-1.html");
+    // load('#post1', "./Posts/2021-11-12-Start.html");
 
     $.when.apply(null, deferreds).done(function () {
         var list = document.getElementsByClassName('glslCanvas');
