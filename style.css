@@ -296,11 +296,9 @@ a.homeLink:active {
 .card {
   padding: 3rem;
   margin-top: 2rem;
-  /* background-image: var(--bg-img-elements); */
-
-  background: linear-gradient(var(--main-box-color), var(--main-box-color)), var(--bg-img-elements);
-  /* background-color: var(--main-box-color); */
-  /* background-blend-mode: multiply; */
+  background-image: var(--bg-img-elements);
+  background-color: var(--main-box-color);
+  background-blend-mode: multiply;
   box-shadow: var(--main-box-shadow-setting);
 }
 
