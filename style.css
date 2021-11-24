@@ -298,7 +298,7 @@ a.homeLink:active {
   margin-top: 2rem;
   background-image: var(--bg-img-elements);
   background-color: var(--main-box-color);
-  background-blend-mode: multiply !important;
+  background-blend-mode: multiply;
   box-shadow: var(--main-box-shadow-setting);
 }
 
