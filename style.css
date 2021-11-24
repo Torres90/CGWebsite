@@ -95,14 +95,14 @@ and surrounding that you have the margin.
   --header-title-color: var(--accent-color02);
 
   --main-bg-color: var(--main-color01);
-  --main-box-color: rgba(107, 79, 79, 0.87);
+  --main-box-color: var(--main-color02);
   --main-box-shadow-setting: 10px 10px 10px 2px rgba(0, 0, 0, 0.5);
   --link-color: var(--accent-color01);
   --header-links-color: var(--accent-color01);
   --header-links-hover-color: var(--accent-color02);
 
   --bg-img: url(./Images/noisy-texture-100x100.png);
-  --bg-img-elements: url(./Images/textured_paper.png);
+  --bg-img-elements: url(Images/textured-paper_a.png);
 
   --h2-color: var(--accent-color02);
 
