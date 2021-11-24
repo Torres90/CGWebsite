@@ -11,6 +11,7 @@ $(document).ready(function () {
     load('#navbar', "./Includes/include_navbar.html");
 
     // Posts
+    load('#post7', "./Posts/2021-11-18-BoS-Fence-Extra-Functions2.html");
     load('#post6', "./Posts/2021-11-18-BoS-Fence-Extra-Functions.html");
     load('#post5', "./Posts/2021-11-18-BoS-Fence.html");
     load('#post4', "./Posts/2021-11-17-Learning-Algebra.html");
