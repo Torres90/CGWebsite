@@ -95,7 +95,7 @@ and surrounding that you have the margin.
   --header-title-color: var(--accent-color02);
 
   --main-bg-color: var(--main-color01);
-  --main-box-color: var(--main-color02);
+  --main-box-color: rgba(107, 79, 79, 0.87);
   --main-box-shadow-setting: 10px 10px 10px 2px rgba(0, 0, 0, 0.5);
   --link-color: var(--accent-color01);
   --header-links-color: var(--accent-color01);
@@ -125,14 +125,10 @@ body {
   font-family: var(--main-font), serif;
   font-size: 2rem;
   line-height: 3.5rem;
-  /* padding: 5rem 25rem; */
   padding: 2% 20%;
   background: var(--main-bg-color);
   background-image: var(--bg-img);
   background-attachment: fixed;
-  /* background: linear-gradient(0deg, #516780 0%, rgba(148,187,233,1) 100%); */
-  /* background-repeat: no-repeat; */
-  /* background-position: right top; */
   cursor: crosshair
 }
 
@@ -294,13 +290,17 @@ a.homeLink:active {
   border-radius: 50%;
 }
 
+
+
 /* Add a card effect for articles */
 .card {
   padding: 3rem;
   margin-top: 2rem;
-  background-image: var(--bg-img-elements);
-  background-color: var(--main-box-color);
-  background-blend-mode: multiply;
+  /* background-image: var(--bg-img-elements); */
+
+  background: linear-gradient(var(--main-box-color), var(--main-box-color)), var(--bg-img-elements);
+  /* background-color: var(--main-box-color); */
+  /* background-blend-mode: multiply; */
   box-shadow: var(--main-box-shadow-setting);
 }
 
@@ -327,14 +327,14 @@ a.homeLink:active {
 }
 
 /* Responsive layout */
-@media screen and (max-width: 1400px) {
+/* @media screen and (max-width: 1400px) {
   body {
     padding: 2% 5%;
   }
-}
+} */
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   body {
     padding: 2rem;
   }
@@ -343,10 +343,10 @@ a.homeLink:active {
     width: 100%;
     padding: 0;
   }
-}
+} */
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 400px) {
   body {
     padding: 2rem;
   }
@@ -355,4 +355,4 @@ a.homeLink:active {
     float: none;
     width: 100%;
   }
-}
+} */
