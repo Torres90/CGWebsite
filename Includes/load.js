@@ -6,9 +6,9 @@ function load(selector, path) {
 }
 
 $(document).ready(function () {
-    load('#header', "./Includes/include_header.html");
+    // load('#header', "./Includes/include_header.html");
     load('#footer', "./Includes/include_footer.html");
-    load('#navbar', "./Includes/include_navbar.html");
+    // load('#navbar', "./Includes/include_navbar.html");
 
     // Posts
     load('#post10', "./Posts/2021-11-26-BoS-Fence-Extra-Functions3.html");
