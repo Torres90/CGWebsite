@@ -59,11 +59,11 @@ let headerHTML = `
   <p>oh god there is so much to learn</p>
 </div>
 <div class="topnav">
-  <a href="/index.html">Home</a>
-  <a href="/ShadersStudy.html">Shaders Study</a>
-  <a href="/Resources.html">Resources</a>
+  <a href="index.html">Home</a>
+  <a href="ShadersStudy.html">Shaders Study</a>
+  <a href="Resources.html">Resources</a>
   <a href="http://editor.thebookofshaders.com/">Shader Editor</a>
-  <a href="/CV.html" style="float:right">CV</a>
+  <a href="CV.html" style="float:right">CV</a>
 </div>
 `
 
