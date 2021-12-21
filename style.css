@@ -200,6 +200,17 @@ ul {
   padding-left: 2rem
 }
 
+#recentpostlistdiv li, ul {
+  /* list-style-type: none; */
+  padding-left: 0rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+#nextprev {
+  text-align: center;;
+}
+
 /* Header/Blog Title */
 .header {
   color: var(--header-title-color);

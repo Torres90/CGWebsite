@@ -3,7 +3,7 @@
 
 <head>
     <title>Blog Post</title>
-    <!-- If you leave title as "Blog Post", it will automatically be updated to the post title -->
+    <!-- If you leave title as "Blog Post", it will automatically be updated to the post title from <h2 id="postTitleH1">___</h2> -->
     <meta charset="UTF-8">
     <meta name="description" content="The blog and personal portfolio of Francisco Torres">
     <meta name="keywords" content="C#, Shaders, CG, Computer Graphics, Maths, GameDev, Unity">
@@ -11,83 +11,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="/Prism/prism.css">
-
     <link rel="icon" href="/brackets-curly.svg">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- <script src="Includes/load.js"></script> -->
-    <script type="text/javascript"
-        src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
+    <!-- <link rel="stylesheet" href="/Prism/prism.css"> -->
 
-    <script src="/Prism/prism.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script src="Includes/load.js"></script> -->
+    <!-- <script type="text/javascript"
+        src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script> -->
+
+    <!-- <script src="/Prism/prism.js"></script> -->
 </head>
 
 <body>
     <div id="header">...</div>
     <div class="row">
         <div class="leftcolumn">
+
             <div class="card">
                 <h2 id="postTitleH1">BoS - Colors</h2>
                 <h5 id="postDate"></h5>
-                <canvas class="glslCanvas" data-fragment-url="/Shaders/sineWave01-phaseAnim.frag" width="400"
-                    height="400"></canvas>
-                <pre><code class="language-csharp">using UnityEngine;
 
-public class LinePlotterCube : MonoBehaviour
-{
-    public Camera mainCam;
-
-    void Start()
-    {
-        camPos = new Vector3(2, 3, 5);
-        mainCam.transform.position = camPos;
-
-        Vector3 A = new(1, 1, 1);
-        Vector3 B = new(-1, 1, 1);
-        Vector3 C = new(1, -1, 1);
-        Vector3 D = new(-1, -1, 1);
-        Vector3 E = new(1, 1, -1);
-        Vector3 F = new(-1, 1, -1);
-        Vector3 G = new(1, -1, -1);
-        Vector3 H = new(-1, -1, -1);
-    }
-}
-                </code></pre>
-                <p>I think writing a new shader every time I want to test or understand a new function is
-                    counter-productive.</p>
-                <p>With <a href="https://graphtoy.com/">graphtoy</a> I can do this much faster. So I'll be writing some
-                    functions
-                    there, screenshot the result and place those images here with a link to the function on the website.
-                    Easier.</p>
-                <p>Plus, it's very useful to go through the process of shaping the function, like so:</p>
-                <a
-                    href="https://graphtoy.com/?f1(x,t)=x&v1=true&f2(x,t)=x%C2%B2&v2=true&f3(x,t)=sqrt(x%C2%B2)&v3=true&f4(x,t)=1-x%C2%B2&v4=true&f5(x,t)=sqrt(1-x%C2%B2)&v5=true&f6(x,t)=1%20-%20sqrt(1-x%C2%B2)&v6=true&grid=true&coords=0.00028634943395239483,0.4627166488664494,1.1219222603325378"><img
-                        src="/Images/Graphtoy/circular_interpolation01.PNG"></a>
-                <p><i>(oh, and you can just right-click on the graph to save it as an image)</i></p>
-                <h3>Colors</h3>
-                <p>This chapter explains what the mix() function does and references <a
-                        href="https://easings.net/">easing
-                        functions</a> and how to implement them in <a
-                        href="https://thebookofshaders.com/edit.php#06/easing.frag">GLSL</a>.</p>
-                <p>It then presents 4 challenges:</p>
-                <ul>
-                    <li>Compose a gradient that resembles a William Turner sunset.</li>
-                    <li>Animate a transition between a sunrise and sunset using u_time.</li>
-                    <li> Can you make a rainbow using what we have learned so far?</li>
-                    <li>Use the step() function to create a colorful flag.</li>
-                </ul>
-                <h3>Challenge 1 - Sunset</h3>
-                <p>Turning this:</p>
-                <p><img src="/Images/turner_sunset.jpg"></p>
-                <p>Into this:</p>
-                <p>shader here</p>
-
+                <p>Content goes here</p>
 
                 <div id="nextprev"></div>
             </div>
-
-
 
         </div>
         <div class="rightcolumn">

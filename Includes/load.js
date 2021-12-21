@@ -7,7 +7,7 @@ function load(selector, path) {
 
 $(document).ready(function () {
     // load('#header', "./Includes/include_header.html");
-    load('#footer', "./Includes/include_footer.html");
+    // load('#footer', "./Includes/include_footer.html");
     // load('#navbar', "./Includes/include_navbar.html");
 
     // Posts

@@ -78,8 +78,9 @@ let sidebarHTML = `
     <br>
     <p>Portugal</p>
     <p>Game Dev</p>
-    <p>CG</p>
-</div>`
+    <p>CG</p>    
+</div>
+<div class="card"><div id="recentpostlistdiv"></div></div>`
 
 //To do the following stuff, we want to know where we are in the posts array (if we're currently on a post page).
 let currentIndex = -1;
@@ -161,7 +162,7 @@ postListHTML += "</ul>";
 
 //Generate the Recent Post List HTML, which can be shown on the home page (or wherever you want!)
 let recentPostsCutoff = 3; //Hey YOU! Change this number to set how many recent posts to show before cutting it off with a "more posts" link.
-let recentPostListHTML = "<h2>Recent Posts:</h2><ul>";
+let recentPostListHTML = "<h4>Recent Posts:</h4><ul>";
 let numberOfRecentPosts = Math.min(recentPostsCutoff, postsArray.length);
 for (let i = 0; i < numberOfRecentPosts; i++) {
   recentPostListHTML += formatPostLink(i);
@@ -212,6 +213,9 @@ if (document.getElementById("nextprev")) {
 if (document.getElementById("postlistdiv")) {
   document.getElementById("postlistdiv").innerHTML = postListHTML;
 }
+if (document.getElementById("sidebar")) {
+  document.getElementById("sidebar").innerHTML = sidebarHTML;
+}
 if (document.getElementById("recentpostlistdiv")) {
   document.getElementById("recentpostlistdiv").innerHTML = recentPostListHTML;
 }
@@ -227,9 +231,9 @@ if (document.getElementById("postTitleH1")) {
 if (document.getElementById("postDate")) {
   document.getElementById("postDate").innerHTML = niceDate;
 }
-if (document.getElementById("sidebar")) {
-  document.getElementById("sidebar").innerHTML = sidebarHTML;
-}
+// if (document.getElementById("sidebar")) {
+//   document.getElementById("sidebar").innerHTML = sidebarHTML;
+// }
 
 if (document.getElementById("footer")) {
   document.getElementById("footer").innerHTML = footerHTML;
