@@ -34,6 +34,9 @@ let postsArray = [
   //[ "posts/2020-11-10-Special-Characters-Example.html", encodeURI( 'Spéci@l "Character\'s" Examp|e' ) ]
   //[ "posts/2020-11-10-My-Third-Post-Example.html" ],
   //[ "posts/2020-11-10-My-Second-Post-Example.html" ],
+  ["Posts/2021-11-17-Learning-Algebra.html"],
+  ["Posts/2021-11-16-Starting-Book-of-Shaders.html"],
+  ["Posts/2021-11-12-Start.html"],
   ["Posts/2021-11-12-Lecture-1.html"],
   ["Posts/2020-11-10-Post-Template.html"]];
 
@@ -74,7 +77,7 @@ let footerHTML = "<h5> This is an organic website, home - grown by yours truly u
 let sidebarHTML = `
 <div class="card">
     <h3>About Me</h3>
-    <div><a href="https://twitter.com/dooomscrolls"> <img src="/Images/profilepic.jpeg"></a></div>
+    <div><a href="https://twitter.com/dooomscrolls"> <img src="/CGWebsite/Images/profilepic.jpeg"></a></div>
     <p><b>Francisco Torres</b></p>
     <br>
     <p>Portugal</p>

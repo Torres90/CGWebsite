@@ -1,12 +1,62 @@
-<div class="card">
-    <h2>Getting started with The Book of Shaders</h2>
-    <h5>16th Nov, 2020</h5>
-    <p>To start with, I want to use <a href="https://github.com/patriciogonzalezvivo/glslCanvas">this library</a> by
-        the
-        very same creator of The Book of Shaders to post here in a more
-        pleasant way my progress through the book.</p>
-    <p>Testing the very first, most basic example:</p>
-    <canvas class="glslCanvas" data-fragment-url="Shaders/test.frag" width="400" height="400"></canvas>
+<!DOCTYPE html>
+<html>
 
-    <p>Great! And here's the <a href="Shaders/test.frag" target="_blank">shader file</a>.</p>
-</div>
+<head>
+    <title>Blog Post</title>
+    <!-- If you leave title as "Blog Post", it will automatically be updated to the post title from <h2 id="postTitleH1">___</h2> -->
+    <meta charset="UTF-8">
+    <meta name="description" content="The blog and personal portfolio of Francisco Torres">
+    <meta name="keywords" content="C#, Shaders, CG, Computer Graphics, Maths, GameDev, Unity">
+    <meta name="author" content="Francisco Torres">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../brackets-curly.svg">
+
+    <!-- <link rel="stylesheet" href="../Prism/prism.css"> -->
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+    <script type="text/javascript"
+        src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
+
+    <!-- <script src="../Prism/prism.js"></script> -->
+</head>
+
+<body>
+    <div id="header">...</div>
+    <div class="row">
+        <div class="leftcolumn">
+
+            <div class="card">
+                <h2 id="postTitleH1"></h2>
+                <h5 id="postDate"></h5>
+
+                <h2>Getting started with The Book of Shaders</h2>
+                <h5>16th Nov, 2020</h5>
+                <p>To start with, I want to use <a href="https://github.com/patriciogonzalezvivo/glslCanvas">this
+                        library</a> by
+                    the
+                    very same creator of The Book of Shaders to post here in a more
+                    pleasant way my progress through the book.</p>
+                <p>Testing the very first, most basic example:</p>
+                <canvas class="glslCanvas" data-fragment-url="../Shaders/test.frag" width="400" height="400"></canvas>
+
+                <p>Great! And here's the <a href="../Shaders/test.frag" target="_blank">shader file</a>.</p>
+
+                <div id="nextprev"></div>
+            </div>
+
+        </div>
+        <div class="rightcolumn">
+            <div id="sidebar"></div>
+        </div>
+
+    </div>
+    <div id="footer"></div>
+
+    <script src="../zonelets_script.js"></script>
+
+</body>
+
+</html>
